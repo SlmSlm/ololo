@@ -54,6 +54,14 @@
         webvisor: true,
       });
     </script>
+
+    <script>
+      function nextStep(event) {
+        event.preventDefault();
+        location.href = "./secondStep/index.html";
+      }
+    </script>
+
     <noscript
       ><div>
         <img
@@ -129,7 +137,7 @@
     <div class="wrapper">
       <div class="container">
         <div class="row">
-          <form method="POST" action="./secondStep">
+          <form method="POST" onsubmit="nextStep(event)">
             <input type="hidden" name="_ref" value="https://southernne.pl/" />
 
             <div
